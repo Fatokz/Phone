@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    height: 35em;
+    width: 18.5em;
+    /* background-image: url(iphone.jpg); */
+    background-size: cover;
+    border: 4px solid black;
+    margin-inline: auto;
+    margin-block: 10px;
+    border-radius: 25px;
+    padding: 0 0 5px 5px;
+}
+
+#flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#network {
+    width: 5em;
+    -moz-animation: marquee 10s linear infinite;
+    -webkit-animation: marquee 10s linear infinite;
+    animation: marquee 2s infinite alternate linear;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    15% {
+        transform: translateX(100%);
+    }
+}
+
+#sub-div {
+    height: 1.2em;
+    width: 13em;
+    background-color: black;
+    border-radius: 0 0 20px 20px;
+    padding: 7px;
+    position: relative;
+}
+
+#circle {
+    height: 1em;
+    width: 1em;
+    background-color: rgb(41, 39, 39);
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#oval {
+    height: 1em;
+    width: 6em;
+    background-color: rgb(41, 39, 39);
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+#circle1 {
+    height: 1em;
+    width: 1em;
+    background-color: rgb(41, 39, 39);
+    border-radius: 50%;
+    margin-left: 6.5em;
+}
+
+#icon {
+    width: 7.7em;
+    font-size: 13px;
+}
+
+#icon i {
+    padding: 0 2px 0 4px;
+}
+
+#power-btn {
+    height: 4em;
+    width: 0.4em;
+    background-color: black;
+    border-radius: 0 10px 10px 0;
+    margin: 4em 0 0 18.6em;
+    cursor: pointer;
+    position: absolute;
+}
