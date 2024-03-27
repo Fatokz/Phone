@@ -23,8 +23,8 @@
 
 #network {
     width: 5em;
-    -moz-animation: marquee 10s linear infinite;
-    -webkit-animation: marquee 10s linear infinite;
+    -moz-animation: marquee 2s linear infinite;
+    -webkit-animation: marquee 2s linear infinite;
     animation: marquee 2s infinite alternate linear;
 }
 
@@ -32,7 +32,6 @@
     0% {
         transform: translateX(100%);
     }
-
     15% {
         transform: translateX(100%);
     }
