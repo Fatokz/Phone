@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    background-color: aliceblue;
+}
+
 #main {
     height: 35em;
     width: 18.5em;
@@ -13,6 +17,7 @@
     margin-block: 10px;
     border-radius: 25px;
     padding: 0 0 5px 5px;
+    filter: drop-shadow(0 0 0.7rem black);
 }
 
 #flex {
@@ -34,6 +39,7 @@
     }
     15% {
         transform: translateX(100%);
+        color: white;
     }
 }
 
