@@ -1,7 +1,4 @@
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
-// main.style.backgroundImage = 
-
-// let black = main.style.backgroundColor = "black"
 let show = true
 
 function onn() {

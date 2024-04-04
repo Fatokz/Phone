@@ -10,7 +10,6 @@ body{
 #main {
     height: 35em;
     width: 18.5em;
-    /* background-image: url(iphone.jpg); */
     background-size: cover;
     border: 4px solid black;
     margin-inline: auto;
@@ -40,7 +39,6 @@ body{
     }
     15% {
         transform: translateX(100%);
-        /* color: white; */
     }
 }
 
