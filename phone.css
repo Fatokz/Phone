@@ -28,6 +28,7 @@ body{
 
 #network {
     width: 5em;
+    /* background-color: red; */
     -moz-animation: marquee 2s linear infinite;
     -webkit-animation: marquee 2s linear infinite;
     animation: marquee 2s infinite alternate linear;
@@ -39,7 +40,7 @@ body{
     }
     15% {
         transform: translateX(100%);
-        color: white;
+        /* color: white; */
     }
 }
 

@@ -1,13 +1,17 @@
-// let none = document.getElementById("main");
+document.getElementById("main").style.backgroundImage = "url('black.jpg')";
+// main.style.backgroundImage = 
 
-main.style.backgroundImage = "url('iphone.jpg')";
+// let black = main.style.backgroundColor = "black"
+let show = true
 
 function onn() {
-    // let none = document.getElementById("main");
-    main.style.backgroundImage = "url('iphone.jpg')";
-    if (main.style.backgroundImage.display === "block") {
-        main.style.backgroundImage.display = "block";
-    } else {
-        main.style.backgroundImage.display = "none";
+    console.log(show);
+    if (show == true) {
+        document.getElementById("main").style.backgroundImage = "url('iphone.jpg')"
+        show = false  
+    }
+    else {
+        document.getElementById("main").style.backgroundImage =  "url('black.jpg')";
+        show =  true
     }
 }
