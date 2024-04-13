@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body{
+body {
     background-color: aliceblue;
 }
 
@@ -12,11 +12,13 @@ body{
     width: 18.5em;
     background-size: cover;
     border: 4px solid black;
+    /* background-color: black; */
     margin-inline: auto;
     margin-block: 10px;
     border-radius: 25px;
-    padding: 0 0 5px 5px;
+    padding: 0 5px 5px 5px;
     filter: drop-shadow(0 0 0.7rem black);
+    /* position: absolute; */
 }
 
 #flex {
@@ -37,6 +39,7 @@ body{
     0% {
         transform: translateX(100%);
     }
+
     15% {
         transform: translateX(100%);
     }
@@ -47,6 +50,7 @@ body{
     width: 13em;
     background-color: black;
     border-radius: 0 0 20px 20px;
+    /* border-radius: 20px; */
     padding: 7px;
     position: relative;
 }
@@ -55,6 +59,7 @@ body{
     height: 1em;
     width: 1em;
     background-color: rgb(41, 39, 39);
+    /* background-color:red; */
     border-radius: 50%;
     margin-left: 5px;
 }
@@ -84,12 +89,130 @@ body{
     padding: 0 2px 0 4px;
 }
 
+#date {
+    /* top: 30px; */
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    /* position: relative; */
+}
+
+#myDate {
+    height: 40px;
+    width: 120px;
+    background-color: red;
+    /* position: relative; */
+}
+
+#myTime {
+    height: 40px;
+    width: 120px;
+    background-color: yellow;
+}
+
+#power {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 5em;
+}
+
+#volume {
+    margin: 0 0 0 -13px;
+    /* position: relative; */
+}
+
+#volume1 {
+    height: 40px;
+    width: 5px;
+    background-color: black;
+    cursor: pointer;
+    /* margin: 0 0 0 0; */
+    border-radius: 5px 0 0 5px;
+}
+
+#volume2 {
+    height: 40px;
+    width: 5px;
+    background-color: black;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+
 #power-btn {
-    height: 4em;
+    height: 5em;
     width: 0.4em;
     background-color: black;
     border-radius: 0 10px 10px 0;
-    margin: 4em 0 0 18.6em;
+    margin: 0 0 0 18.9em;
     cursor: pointer;
     position: absolute;
+}
+
+#cam {
+    height: 40px;
+    /* border: 1px solid black; */
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+#Open {
+    height: 5px;
+    width: 110px;
+    background-color: white;
+    /* margin-inline: auto; */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 2;
+}
+
+
+#touch button {
+    /* padding: 3px; */
+    height: 35px;
+    width: 35px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.324);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+#touch1 button {
+    height: 35px;
+    width: 35px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.324);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+#touch1 i {
+    font-size: 19px;
+}
+
+#password{
+    height: 32em;
+    width: 18.5em;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: absolute;
+    /* top: 34px; */
+    top: 34px;
+    /* z-index: -2; */
+}
+
+#lockScreen{
+    /* display: none; */
 }
