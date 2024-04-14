@@ -237,12 +237,11 @@ body {
 #password{
     height: 35.6em;
     width: 19.7em;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.55);
     position: absolute;
     top: 0;
     margin: 0 0 0 -10px;
     border-radius: 25px;
-    /* padding: 0 5px 5px 5px; */
 }
 
 
@@ -252,4 +251,55 @@ body {
     width: 50px;
     margin: auto;
     text-align: center;
+    padding: 48px 0 0 0 ;
+}
+
+#enter{
+    height: 40px;
+    padding: 60px 0 0 0 ;
+}
+
+#enter p{
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#dot{
+    text-align: center;
+}
+
+#dot input{
+    border: none;
+    outline: none;
+    background:transparent;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+}
+
+#passcode{
+    text-align: center;
+    flex-wrap: wrap;
+    width: 240px;
+    height: 19em;
+    margin: auto;
+    /* background-color: red; */
+}
+
+#passcode p{
+    font-size: 12px;
+}
+
+#passcode button{
+    margin-top: 5px;
+    height: 70px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(79, 72, 72, 0.482);
 }

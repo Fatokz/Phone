@@ -3,6 +3,7 @@ let Dtime = document.getElementById("Dtime")
 let lockScreen = document.getElementById("lockScreen")
 let touch = document.getElementById("touch")
 let camera = document.getElementById("camera")
+let password = document.getElementById("password")
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
 let show = true
 date.style.display = "none"
@@ -11,6 +12,8 @@ camera.style.display = "none"
 Open.style.display = "none"
 password.style.display = "none"
 lockScreen.style.display = "block"
+password.style.display = "none"
+
 
 touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`
 camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
@@ -54,6 +57,8 @@ function onn() {
         touch.style.display = "block"
         camera.style.display = "block"
         Open.style.display = "block"
+        lockScreen.style.display = "block"
+        // password.style.display = "block"
     }
     else {
         document.getElementById("main").style.backgroundImage = "url('black.jpg')";
@@ -62,6 +67,7 @@ function onn() {
         touch.style.display = "none"
         camera.style.display = "none"
         Open.style.display = "none"
+        password.style.display = "none"
     }
 
 }
