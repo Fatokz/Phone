@@ -133,11 +133,15 @@ function pin(event) {
     if (pincode.value.length == 4) {
 
         if (pincode.value == localStorage.getItem("dpin")) {
-            notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "iPhone Unlocked 😋😍" : notcorrect.innerHTML = "Enter Passcode";
+            // notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "iPhone Unlocked 😋😍" : notcorrect.innerHTML = "Enter Passcode";
             Homes()
         } else {
             notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "Incorrect Passcode Try again! 😏🙄" : notcorrect.innerHTML = "Enter Passcode";
         }
         pincode.value = ""
     }
+}
+
+function openiphone() {
+    console.log("next page");
 }
