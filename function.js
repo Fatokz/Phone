@@ -6,12 +6,15 @@ let camera = document.getElementById("camera")
 let password = document.getElementById("password")
 let pssWord = document.getElementById("pssWord")
 let pincode = document.getElementById("pincode")
+let notcorrect = document.getElementById("notcorrect")
+let Home = document.getElementById("Home")
 
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
 
-let pinCode = 2570
+let pinCode = 2580
+console.log(`Phone passcode is ${pinCode}`);
 console.log(pinCode);
-let local = localStorage.setItem("dpin", pinCode)
+localStorage.setItem("dpin", pinCode)
 
 let show = true
 date.style.display = "none"
@@ -21,7 +24,7 @@ Open.style.display = "none"
 password.style.display = "none"
 lockScreen.style.display = "block"
 password.style.display = "none"
-
+Home.style.display = "none"
 
 touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`
 camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
@@ -76,6 +79,8 @@ function onn() {
         camera.style.display = "none"
         Open.style.display = "none"
         password.style.display = "none"
+        touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
+
     }
 
 }
@@ -84,19 +89,26 @@ function openphone() {
     password.style.display == "none" ? password.style.display = "block" : password.style.display = "none";
     lockScreen.style.display == "block" ? lockScreen.style.display = "none" : lockScreen.style.display = "block";
 
-    // touch.innerHTML === `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
-    // camera.innerHTML === `<button><i class="fa-solid fa-camera"></i></button>` ? camera.innerHTML = 'Cancel' : camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
+    touch.innerHTML == `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
+    camera.innerHTML == `<button><i class="fa-solid fa-camera"></i></button>` ? camera.innerHTML = 'Cancel' : camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
+}
+
+function Homes() {
+    
 }
 
 function pin(event) {
     let dpass = (event.target.value)
     console.log(dpass);
     pincode.value += dpass;
-}
 
-// if (pincode.value == local) {
-//     alert("Yes Correct")
-// }
-// else {
-//     alert("Nope")
-// }
+    if (pincode.value.length == 4) {
+
+        if (pincode.value == localStorage.getItem("dpin")) {
+            notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "iPhone Unlocked 😋😍" : notcorrect.innerHTML = "Enter Passcode";
+        } else {
+            notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "Incorrect Passcode Try again! 😏🙄" : notcorrect.innerHTML = "Enter Passcode";
+        }
+        pincode.value = ""
+    }
+}

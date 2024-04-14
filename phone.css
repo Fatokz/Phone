@@ -53,6 +53,7 @@ body {
     /* border-radius: 20px; */
     padding: 7px;
     position: relative;
+    z-index: 3;
 }
 
 #circle {
@@ -83,6 +84,7 @@ body {
 #icon {
     width: 7.7em;
     font-size: 13px;
+    /* z-index: 5; */
 }
 
 #icon i {
@@ -197,12 +199,12 @@ body {
 
 #touch{
     color: white;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 #camera{
     color: white;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 #touch button {
@@ -302,5 +304,19 @@ body {
     border-radius: 50%;
     color: white;
     font-size: 25px;
-    background-color: rgba(79, 72, 72, 0.482);
+    background-color: rgba(62, 59, 59, 0.482);
+}
+
+#passcode button:focus-within{
+    border: 1px solid white;
+}
+
+#Home{
+    height: 35.3em;
+    width: 19.2em;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    margin: 0 0 0 -5.5px;
+    border-radius: 25px;
 }
