@@ -4,7 +4,15 @@ let lockScreen = document.getElementById("lockScreen")
 let touch = document.getElementById("touch")
 let camera = document.getElementById("camera")
 let password = document.getElementById("password")
+let pssWord = document.getElementById("pssWord")
+let pincode = document.getElementById("pincode")
+
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
+
+let pinCode = 2570
+console.log(pinCode);
+let local = localStorage.setItem("dpin", pinCode)
+
 let show = true
 date.style.display = "none"
 touch.style.display = "none"
@@ -26,7 +34,7 @@ function dDate() {
         let date = new Date
 
         // Ddate.innerHTML =`${date.getMonth()}, ${date.getDay()}`
-        Ddate.innerHTML =`${date.toDateString()}`
+        Ddate.innerHTML = `${date.toDateString()}`
     }, 1000);
 }
 
@@ -79,3 +87,16 @@ function openphone() {
     // touch.innerHTML === `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
     // camera.innerHTML === `<button><i class="fa-solid fa-camera"></i></button>` ? camera.innerHTML = 'Cancel' : camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
 }
+
+function pin(event) {
+    let dpass = (event.target.value)
+    console.log(dpass);
+    pincode.value += dpass;
+}
+
+// if (pincode.value == local) {
+//     alert("Yes Correct")
+// }
+// else {
+//     alert("Nope")
+// }

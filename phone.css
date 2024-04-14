@@ -267,15 +267,16 @@ body {
 
 #dot{
     text-align: center;
+    margin: -15px 0 0 0 ;
 }
 
 #dot input{
     border: none;
     outline: none;
-    background:transparent;
+    background: transparent;
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     width: 100px;
 }
 
