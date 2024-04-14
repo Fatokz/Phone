@@ -8,6 +8,11 @@ let pssWord = document.getElementById("pssWord")
 let pincode = document.getElementById("pincode")
 let notcorrect = document.getElementById("notcorrect")
 let Home = document.getElementById("Home")
+let cam = document.getElementById("cam")
+let network = document.getElementById("network")
+let icons = document.getElementById("icons")
+let icon1 = document.getElementById("icon1")
+let icon2 = document.getElementById("icon2")
 
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
 
@@ -17,13 +22,17 @@ console.log(pinCode);
 localStorage.setItem("dpin", pinCode)
 
 let show = true
+
+network.style.color = "black"
+icons.style.color = "black"
+icon1.style.color = "black"
+icon2.style.color = "black"
 date.style.display = "none"
 touch.style.display = "none"
 camera.style.display = "none"
 Open.style.display = "none"
 password.style.display = "none"
 lockScreen.style.display = "block"
-password.style.display = "none"
 Home.style.display = "none"
 
 touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`
@@ -64,23 +73,34 @@ function onn() {
     if (show == true) {
         document.getElementById("main").style.backgroundImage = "url('iphone.jpg')"
         show = false
+
+        network.style.color = "white"
+        icons.style.color = "white"
+        icon1.style.color = "white"
+        icon2.style.color = "white"
         date.style.display = "block"
         touch.style.display = "block"
         camera.style.display = "block"
         Open.style.display = "block"
+        // cam.style.display = "block"
         lockScreen.style.display = "block"
         // password.style.display = "block"
     }
     else {
         document.getElementById("main").style.backgroundImage = "url('black.jpg')";
         show = true
+
+        network.style.color = "black"
+        icons.style.color = "black"
+        icon1.style.color = "black"
+        icon2.style.color = "black"
         date.style.display = "none"
         touch.style.display = "none"
         camera.style.display = "none"
         Open.style.display = "none"
         password.style.display = "none"
+        Home.style.display = "none"
         touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
-
     }
 
 }
@@ -88,13 +108,21 @@ function onn() {
 function openphone() {
     password.style.display == "none" ? password.style.display = "block" : password.style.display = "none";
     lockScreen.style.display == "block" ? lockScreen.style.display = "none" : lockScreen.style.display = "block";
+    // touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
 
     touch.innerHTML == `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
     camera.innerHTML == `<button><i class="fa-solid fa-camera"></i></button>` ? camera.innerHTML = 'Cancel' : camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
 }
 
 function Homes() {
-    
+    Home.style.display = "block"
+    password.style.display = "none"
+    // cam.style.display = "none"
+    touch.style.display = "none"
+    camera.style.display = "none"
+    Open.style.display = "none"
+    document.getElementById("main").style.backgroundImage = "url('black.jpg')";
+
 }
 
 function pin(event) {
@@ -106,6 +134,7 @@ function pin(event) {
 
         if (pincode.value == localStorage.getItem("dpin")) {
             notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "iPhone Unlocked 😋😍" : notcorrect.innerHTML = "Enter Passcode";
+            Homes()
         } else {
             notcorrect.innerHTML == "Enter Passcode" ? notcorrect.innerHTML = "Incorrect Passcode Try again! 😏🙄" : notcorrect.innerHTML = "Enter Passcode";
         }
