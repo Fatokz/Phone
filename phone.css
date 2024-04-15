@@ -338,7 +338,7 @@ body {
     height: 37em;
     width: 2em;
     border: none;
-    /* background: none; */
+    background: none;
     cursor: pointer;
     position: absolute;
 }
@@ -347,7 +347,7 @@ body {
     height: 37em;
     width: 2em;
     border: none;
-    /* background: none; */
+    background: none;
     cursor: pointer;
 }
 
@@ -365,6 +365,44 @@ body {
     bottom: 0;
     z-index: 2;
     /* background-color: red; */
+}
+
+#Hmpage{
+    margin: 50px 20px 0 20px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    gap: 10px 10px;
+    justify-content: center;
+}
+
+#app button{
+    border: none;
+    background: transparent;
+}
+
+#app img{
+    height: 50px;
+    width: 50px;
+}
+
+#bottomApp{
+    margin: -70px 20px 0 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#mustApp button{
+    border: none;
+    background: transparent;
+}
+
+#mustApp img{
+    height: 50px;
+    width: 50px;
 }
 
 #unlock{

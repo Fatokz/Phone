@@ -7,6 +7,7 @@ let password = document.getElementById("password")
 let pssWord = document.getElementById("pssWord")
 let pincode = document.getElementById("pincode")
 let notcorrect = document.getElementById("notcorrect")
+let lockScreen1 = document.getElementById("lockScreen1")
 let Home = document.getElementById("Home")
 let cam = document.getElementById("cam")
 let network = document.getElementById("network")
@@ -39,8 +40,8 @@ touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on
 camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>`
 // camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
 
-console.log(touch.innerHTML);
-console.log(camera.innerHTML);
+// console.log(touch.innerHTML);
+// console.log(camera.innerHTML);
 
 function dDate() {
     setInterval(() => {
@@ -101,8 +102,8 @@ function onn() {
         Open.style.display = "none"
         password.style.display = "none"
         Home.style.display = "none"
-        touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
-        camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel"
+        // touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
+        // camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel"
     }
 
 }
@@ -115,6 +116,11 @@ function openphone() {
     touch.innerHTML == `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
     camera.innerHTML == `<button><span class="material-symbols-outlined">photo_camera</span></button>` ? camera.innerHTML = "Cancel" : camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>`
 }
+
+// function close(event) {
+//     console.log("yes");
+//     console.log(event.target);
+// }
 
 function Homes() {
     Home.style.display = "block"
