@@ -36,7 +36,8 @@ lockScreen.style.display = "block"
 Home.style.display = "none"
 
 touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`
-camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
+camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>`
+// camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
 
 console.log(touch.innerHTML);
 console.log(camera.innerHTML);
@@ -101,6 +102,7 @@ function onn() {
         password.style.display = "none"
         Home.style.display = "none"
         touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
+        camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel"
     }
 
 }
@@ -111,7 +113,7 @@ function openphone() {
     // touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
 
     touch.innerHTML == `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
-    camera.innerHTML == `<button><i class="fa-solid fa-camera"></i></button>` ? camera.innerHTML = 'Cancel' : camera.innerHTML = `<button><i class="fa-solid fa-camera"></i></button>`
+    camera.innerHTML == `<button><span class="material-symbols-outlined">photo_camera</span></button>` ? camera.innerHTML = "Cancel" : camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>`
 }
 
 function Homes() {
