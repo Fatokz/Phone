@@ -153,3 +153,11 @@ function pin(event) {
 function openiphone() {
     console.log("next page");
 }
+
+function next() {
+    console.log("Next app");
+}
+
+function prev() {
+    console.log("Prev app");
+}

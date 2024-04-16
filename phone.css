@@ -368,14 +368,19 @@ body {
 }
 
 #Hmpage{
-    margin: 50px 20px 0 20px;
+    margin: 50px 15px 0 30px;
     position: absolute;
     top: 0;
     display: flex;
     flex-wrap: wrap;
     width: 240px;
-    gap: 10px 10px;
-    justify-content: center;
+    gap: 10px 13px;
+    /* background-color: red; */
+}
+
+#app{
+    color: white;
+    /* font-family: sans-serif; */
 }
 
 #app button{
@@ -389,15 +394,23 @@ body {
 }
 
 #bottomApp{
-    margin: -70px 20px 0 20px;
+    height: 3em;
+    width: 85%;
+    background-color: rgba(69, 69, 69, 0.594);
+    margin: -70px 15px 0 24px;
+    border-radius: 9px;
     display: flex;
     gap: 15px;
     justify-content: center;
+    padding: 6px 0 7px 0;
+    /* filter: blur(1px); */
+    /* filter: blur(3px); */
 }
 
 #mustApp button{
     border: none;
     background: transparent;
+    z-index: 3;
 }
 
 #mustApp img{
