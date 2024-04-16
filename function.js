@@ -102,8 +102,8 @@ function onn() {
         Open.style.display = "none"
         password.style.display = "none"
         Home.style.display = "none"
-        // touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
-        // camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel"
+        touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency"
+        camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel"
     }
 
 }
