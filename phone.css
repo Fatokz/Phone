@@ -343,6 +343,11 @@ body {
     position: absolute;
 }
 
+#close{
+    width: 4.5em;
+    text-align: right;
+}
+
 #carousel1 button{
     height: 37em;
     width: 2em;
@@ -373,24 +378,27 @@ body {
     top: 0;
     display: flex;
     flex-wrap: wrap;
-    width: 240px;
+    width: 260px;
     gap: 10px 13px;
     /* background-color: red; */
 }
 
 #app{
     color: white;
+    text-align: center;
     /* font-family: sans-serif; */
 }
 
 #app button{
     border: none;
     background: transparent;
+    border-radius: 5px;
 }
 
 #app img{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
 }
 
 #bottomApp{
