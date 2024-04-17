@@ -163,3 +163,7 @@ function next() {
 function prev() {
     console.log("Prev app");
 }
+
+function app(event) {
+    console.log(event.target);
+}
