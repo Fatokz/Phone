@@ -15,6 +15,8 @@ let network = document.getElementById("network");
 let icons = document.getElementById("icons");
 let icon1 = document.getElementById("icon1");
 let icon2 = document.getElementById("icon2");
+let camera_page = document.getElementById("camera_page");
+
 
 // Setting background image of the main element
 document.getElementById("main").style.backgroundImage = "url('black.jpg')";
@@ -36,6 +38,7 @@ Open.style.display = "none";
 password.style.display = "none";
 lockScreen.style.display = "block";
 Home.style.display = "none";
+camera_page.style.display = "none";
 
 // Creating buttons for touch and camera elements
 touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
@@ -72,7 +75,7 @@ dTime();
 show = true;
 
 // Function to toggle phone screen
-function onn() {
+function ON() {
     if (show == true) {
         // Displaying phone screen
         document.getElementById("main").style.backgroundImage = "url('iphone.jpg')";
@@ -88,6 +91,9 @@ function onn() {
         camera.style.display = "block";
         Open.style.display = "block";
         lockScreen.style.display = "block";
+
+        touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` 
+        camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` 
 
     } else {
         // Displaying lock screen
@@ -105,22 +111,24 @@ function onn() {
         Open.style.display = "none";
         password.style.display = "none";
         Home.style.display = "none";
+        camera_page.style.display = "none";
 
+
+        pincode.value = "";
+        notcorrect.innerHTML = "Enter Passcode"
+        touch.innerHTML = "Emergency";
+        camera.innerHTML = `<div id = close> Cancel </div>`;
     }
-}
-
-function btn() {
-    // Resetting touch and camera buttons
-    touch.innerHTML == "Emergency" ? touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>` : touch.innerHTML = "Emergency";
-    camera.innerHTML == "Cancel" ? camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>` : camera.innerHTML = "Cancel";
 }
 
 
 
 // Function to toggle between lock screen and password screen
 function openphone() {
-    password.style.display == "none" ? password.style.display = "block" : password.style.display = "none";
-    lockScreen.style.display == "block" ? lockScreen.style.display = "none" : lockScreen.style.display = "block";
+    pincode.value = "";
+    notcorrect.innerHTML = "Enter Passcode"
+    password.style.display === "none" ? password.style.display = "block" : password.style.display = "none";
+    lockScreen.style.display === "block" ? lockScreen.style.display = "none" : lockScreen.style.display = "block";
 
     touch.innerHTML == `<button><span class="material-symbols-outlined">flashlight_on</span></button>` ? touch.innerHTML = "Emergency" : touch.innerHTML = `<button><span class="material-symbols-outlined">flashlight_on</span></button>`;
     camera.innerHTML == `<button><span class="material-symbols-outlined">photo_camera</span></button>` ? camera.innerHTML = `<div id = close> Cancel </div>` : camera.innerHTML = `<button><span class="material-symbols-outlined">photo_camera</span></button>`;
@@ -154,6 +162,8 @@ function pin(event) {
 // Function for further actions
 function openiphone() {
     console.log("next page");
+    camera_page.style.display = "none";
+    Homes()
 }
 
 function next() {
@@ -166,4 +176,43 @@ function prev() {
 
 function app(event) {
     console.log(event.target);
+}
+
+function apps(event) {
+    console.log(event.target);
+    cameraApp()
+}
+
+//Camera Applicaion
+
+function cameraApp() {
+    camera_page.style.display = "block";
+
+    // Accessing the camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            let video = document.getElementById('video');
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function (err) {
+            console.error('Error accessing the camera: ', err);
+        });
+
+    // Capturing images
+    document.getElementById('capture').addEventListener('click', function () {
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let context = canvas.getContext('2d');
+        let width = video.videoWidth;
+        let height = video.videoHeight;
+
+        canvas.width = width;
+        canvas.height = height;
+        context.drawImage(video, 0, 0, width, height);
+
+        // Convert canvas to image data or send to server
+        let imageData = canvas.toDataURL('image/png');
+        console.log(imageData);
+    });
 }

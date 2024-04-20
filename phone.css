@@ -332,6 +332,7 @@ body {
     justify-content: space-between;
     margin-top: 35px;
     position: relative;
+    /* z-index: 5; */
 }
 
 #carousel button{
@@ -341,6 +342,7 @@ body {
     background: none;
     cursor: pointer;
     position: absolute;
+    /* z-index: 5; */
 }
 
 #close{
@@ -354,6 +356,7 @@ body {
     border: none;
     background: none;
     cursor: pointer;
+
 }
 
 
@@ -426,6 +429,24 @@ body {
     width: 50px;
 }
 
+#camera_page{
+    height: 35.4em;
+    width: 19.3em;
+    /* background-color: ; */
+    background: black;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    margin: 0 0 0 0;
+    border-radius: 23px;
+    position: absolute;
+}
+
+#camera_page h1{
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+
 #unlock{
     height: 5px;
     width: 110px;
@@ -435,4 +456,20 @@ body {
     outline: none;
     border: none;
     z-index: 2;
+}
+
+
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+#capture{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10em;
+    background-color: white;
 }
